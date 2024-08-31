@@ -23,14 +23,40 @@ class WebsiteController extends Controller
 
         // model ====> database
         $products = Product::all();
-
-        $fruits = ["banana", "mango", "apple"];
-
+        $fruits = ["orange", "mango", "apple"];
         // dd($array);
         // return 233;
+
         return view('home', [
             'fruit_data' => $fruits,
             'products' => $products
         ]);
+    }
+
+    public function cartPage()
+    {
+        return view('web.cart');
+    }
+    public function webmaster()
+    {
+        return view('web.webmaster');
+    }
+
+    public function shopPage()
+    {
+        return view('web.shop');
+    }
+    public function checkoutPage()
+    {
+        return view('web.checkout');
+    }
+    public function shopdetailPage()
+    {
+        return view('web.shopdetail');
+    }
+
+    public function adminIndexPage()
+    {
+        return view('admin.index');
     }
 }

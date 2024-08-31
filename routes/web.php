@@ -13,13 +13,20 @@ Route::get('/', function () {
 // });
 
 // Web Routes
-
-Route::get("/web", [WebsiteController::class, 'index'])->name('web-index');
-
-
+Route::get("/webmaster", [WebsiteController::class, 'webmaster'])->name('web-master');
+Route::get("/web/index", [WebsiteController::class, 'index'])->name('web-index');
 Route::get("/home", [WebsiteController::class, 'homePage'])->name('web-home');
+Route::get("/cart", [WebsiteController::class, 'cartPage'])->name('web-cart');
+Route::get("/shop", [WebsiteController::class, 'shopPage'])->name('web-shop');
+Route::get("/shopdetail", [WebsiteController::class, 'shopdetailPage'])->name('web-shop-detail');
+Route::get("/checkout", [WebsiteController::class, 'checkoutPage'])->name('web-checkout');
+
 // Route::put("/home/{id}", [WebsiteController::class, 'homePage'])->name('web-home');
 // GET, PUT, POST, DELETE
+
+// admin Routes
+
+Route::get('/admin/index',[WebsiteController::class, 'adminIndexPage'])->name('admin-index');
 
 
 // Query Parameters
