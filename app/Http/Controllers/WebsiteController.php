@@ -57,6 +57,14 @@ class WebsiteController extends Controller
 
     public function adminIndexPage()
     {
-        return view('admin.index');
+        // Database
+        $products = Product::all();
+        return view('admin.index', [
+            'products' => $products
+        ]);
+    }
+    public function adminMasterPage()
+    {
+        return view('admin.adminmaster');
     }
 }

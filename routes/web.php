@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\WebsiteController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -26,8 +27,13 @@ Route::get("/checkout", [WebsiteController::class, 'checkoutPage'])->name('web-c
 
 // admin Routes
 
-Route::get('/admin/index',[WebsiteController::class, 'adminIndexPage'])->name('admin-index');
+Route::get('/admin/index', [WebsiteController::class, 'adminIndexPage'])->name('admin-index');
+Route::get('/admin/master', [WebsiteController::class, 'adminMasterPage'])->name('admin-master');
 
+Route::get('/admin/product/create', [ProductController::class, 'create'])->name('admin-products-create');
+Route::post('admin/prouduct/store', [ProductController::class, 'store'])->name( 'admin-products-store');
+Route::get('admin/product/delete/{id}', [ProductController::class, 'destroy'])->name('admin-products-destroy');
+Route::get('admin/product/edit/{id}', [ProductController::class, 'editForm'])->name('admin-products-edit');
 
 // Query Parameters
 // /home?name=zain&email=abc%20%gmail.com
