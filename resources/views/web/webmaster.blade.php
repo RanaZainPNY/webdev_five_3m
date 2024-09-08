@@ -56,7 +56,7 @@
                     <div class="navbar-nav mx-auto">
                         <a href="{{ route('web-index') }}" class="nav-item nav-link active">Home</a>
                         <a href="{{ route('web-shop') }}" class="nav-item nav-link">Shop</a>
-                        <a href="{{ route('web-shop-detail') }}" class="nav-item nav-link">Shop Detail</a>
+                        {{-- <a href="{{ route('web-shop-detail') }}" class="nav-item nav-link">Shop Detail</a> --}}
                         <a href="{{ route('web-cart') }}" class="nav-item nav-link">Cart</a>
                         <a href="{{ route('web-checkout') }}" class="nav-item nav-link">Checkout</a>
                         {{-- <div class="nav-item dropdown">

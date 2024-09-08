@@ -30,7 +30,8 @@
                                     @foreach ($products as $product)
                                         <tr>
                                             <th scope="row" class="ps-0 fw-medium">{{ $product->id }}</th>
-                                            <td>{{ $product->image }}</td>
+                                            <td><img class='w-100' src="{{ asset('uploads/products/' . $product->image) }}" alt="">
+                                                </td>
                                             <td class="text-center fw-medium">{{ $product->name }}</td>
                                             <td class="text-center fw-medium">{{ $product->sku }}</td>
                                             <td class="text-center fw-medium">{{ $product->price }}</td>

@@ -9,14 +9,13 @@
         </div>
     </div> --}}
 
-
     <div class="container-fluid">
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title fw-semibold mb-2">Create Product</h5>
                 <div class="card">
                     <div class="card-body">
-                        <form action="{{route('admin-products-store')}}" method='POST'>
+                        <form enctype="multipart/form-data" action="{{route('admin-products-store')}}" method='POST'>
                             @csrf
                             <div class="mb-3">
                                 <label for="name" class="form-label">Name</label>

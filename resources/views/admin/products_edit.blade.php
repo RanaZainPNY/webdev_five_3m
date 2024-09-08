@@ -17,7 +17,8 @@
                 <h5 class="card-title fw-semibold mb-2">Edit Product</h5>
                 <div class="card">
                     <div class="card-body">
-                        <form action="{{ route('admin-products-store') }}" method='POST'>
+                        <form enctype="multipart/form-data" action="{{ route('admin-products-update', $product->id) }}"
+                            method='POST'>
                             @csrf
                             <div class="mb-3">
                                 <label for="name" class="form-label">Name</label>
@@ -45,7 +46,7 @@
                                 <input name='image' class="form-control" type="file" id="formFile">
                             </div>
 
-                            <button type="submit" class="btn btn-primary">Create Product</button>
+                            <button type="submit" class="btn btn-success">Edit Product</button>
                         </form>
                     </div>
                 </div>
